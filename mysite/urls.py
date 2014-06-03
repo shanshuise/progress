@@ -10,4 +10,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'progress.views.index', name='index'),
+    url(r'^login/', 'progress.views.login', name='login'),
+    url(r'^logout/', 'progress.views.logout', name='logout'),
+    url(r'^register/', 'progress.views.register', name='register'),
+    url(r'^result/', 'progress.views.result', name='result'),
 )
