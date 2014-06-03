@@ -1,3 +1,4 @@
 from django.contrib import admin
+from progress.models import Progress, User
 
-# Register your models here.
+admin.site.register([Progress, User])
