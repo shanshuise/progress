@@ -51,9 +51,21 @@
     <input type="text" name="pname" class="form-control">
   </div>
   <div class="form-group">
-    <label>项目进度</label>
-    <input type="text" name="pprogress" class="form-control">
-  </div>
+    <label>项目进度</label> 
+
+		<div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">正在编制<span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">初稿完成</a></li>
+          <li><a href="#">审后修改</a></li>
+          <li><a href="#">终稿完成</a></li>
+          <li class="divider"></li>
+          <li><a href="#">结束</a></li>
+        </ul>
+		</div>
+  </div> 
+
+
   <div class="form-group">
     <label>备注</label>
     <input type="text" name="remark" class="form-control">

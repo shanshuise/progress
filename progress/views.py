@@ -50,6 +50,7 @@ def result(request):
         else:
             progress = ''
         data['progress'] = progress
+        data['user'] = user
         data.update(common_response(request))
         return render(request, 'result.html', data)
     else:
