@@ -9,11 +9,9 @@
 
 
 {% block body %}
-
-
       <div class="row marketing">
         <div class="col-lg-12">
-          <h4><a href="/result/">查询结果</a></h4>
+          <h4><a>查询结果</a></h4>
 
       <table class="table table-striped">
         <thead>
@@ -41,9 +39,10 @@
       </div>
       
       
-      
-      
-<hr />
+<div class="row marketing">      
+<div class="col-lg-12">    
+
+<h4><a>输入进度</a></h4>
 <form role="form" action="" method="post">
   {% csrf_token %}
   <div class="form-group">
@@ -51,18 +50,13 @@
     <input type="text" name="pname" class="form-control">
   </div>
   <div class="form-group">
-    <label>项目进度</label> 
-
-		<div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">正在编制<span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">初稿完成</a></li>
-          <li><a href="#">审后修改</a></li>
-          <li><a href="#">终稿完成</a></li>
-          <li class="divider"></li>
-          <li><a href="#">结束</a></li>
-        </ul>
-		</div>
+    <label>项目进度</label>
+	<select class="form-control" name="pprogress">
+	  <option>初稿编制中</option>
+	  <option>审后修改中</option>
+	  <option>已完成终稿</option>
+	  <option>结束</option>
+	</select>
   </div> 
 
 
@@ -74,19 +68,10 @@
   <button type="submit" class="btn btn-default">提交</button>
 </form>
 
+</div>
+</div>  
 
-      
-      
-      
-      
-      
-      
-
-      <div class="footer">
-        <p>&copy; Company 2013</p>
-      </div>
-
-    </div>
 {% endblock %}
+
 
 

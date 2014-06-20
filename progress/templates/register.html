@@ -1,14 +1,35 @@
 {% extends 'base.html' %}
-
 {% block title %}注册{% endblock %}
 
-{% block body %}
-<form action='' method='post'>
-    {% csrf_token %}
-    <label>用户名</label><input type='text' name='username' />
-    <label>部门</label><input type='text' name='department' />
-    <label>请输入密码</label><input type='password' name='password' >
-    <label>再次输入密码</label><input type='password' name='password2' >
-    <input type='submit' value='Submit' />
-</form>
+{% block style %}
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
 {% endblock %}
+		
+{% block body %}
+	{% block header %}
+	{% endblock %}
+	
+      <form class="form-signin" role="form" action='' method='post'>
+		{% csrf_token %}
+        <h2 class="form-signin-heading">请注册</h2>
+        <input class="form-control" placeholder="用户名" required="" autofocus="" type="text" name='username'>
+		<select class="form-control" name="department">			
+		  <option>一所</option>
+		  <option>二所</option>
+		  <option>三所</option>
+		  <option>四所</option>
+		</select>
+
+
+
+
+
+        <input class="form-control" placeholder="输入密码" required="" type="password" name='password'>
+        <input class="form-control" placeholder="重复输入密码" required="" type="password" name='password2'>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+      </form>
+      
+{% endblock %}
+

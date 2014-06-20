@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.utils.encoding import smart_str
-
 from progress.models import Progress, User
 
 def common_response(request):
@@ -24,8 +23,6 @@ def index(request):
     if username != '':
         user = User.objects.get(username=username)
         data['user'] = user
-    else:
-        pass
     data.update(common_response(request))
     return render(request, 'index.html', data)
 
